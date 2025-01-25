@@ -1,0 +1,542 @@
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Changed to single column */
+  gap: 40px; /* Increased gap between projects */
+  margin-bottom: 30px;
+  max-width: 100%; /* Ensure full width */
+}
+
+.project-item {
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.project-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+
+.project-title,
+.project-category { 
+  margin-left: 0; /* Remove left margin */
+  margin-bottom: 15px; /* Add bottom margin */
+  text-align: left;
+}
+
+.project-title {
+  color: var(--white-2);
+  font-size: var(--fs-4); /* Larger font size */
+  font-weight: var(--fw-500); /* Bolder font weight */
+  margin-bottom: 8px; /* Reduced bottom margin */
+  transition: color 0.3s ease;
+}
+
+.project-category {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  margin-bottom: 15px; /* Add margin before image */
+}
+
+.project-img {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Reduced from 400px */
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 0; /* Remove bottom margin since title is above */
+  background-color: var(--eerie-black-1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-item > button:hover .project-img::before {
+  background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0.7),
+    hsla(0, 0%, 0%, 0.9)
+  );
+}
+
+.project-item-icon-box {
+  --scale: 0.8;
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(var(--scale));
+  font-size: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-item > a:hover .project-item-icon-box {
+  --scale: 1;
+  opacity: 1;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Changed to cover for better visual */
+  transition: transform 0.5s ease;
+}
+
+.project-item > button:hover img {
+  transform: scale(1.1);
+}
+
+.project-title,
+.project-category { margin-left: 10px; }
+
+.project-title {
+  color: var(--white-2);
+  font-size: var(--fs-4); /* Larger font size */
+  font-weight: var(--fw-500); /* Bolder font weight */
+  margin: 15px 0 10px;
+  transition: color 0.3s ease;
+}
+
+.project-category {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+}
+
+/* Enhanced Project Modal Styles */
+.project-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--eerie-black-1);
+  border-radius: 20px;
+  padding: 30px;
+  width: 95%;
+  max-width: 900px;
+  height: auto;
+  max-height: 85vh; /* Standardize maximum height */
+  overflow-y: auto;
+  z-index: 10;
+  display: none;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-modal .modal-img-wrapper {
+  position: relative;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--eerie-black-1); /* Add background color */
+  aspect-ratio: 16/10; /* Changed from 16/9 for slightly shorter height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal .modal-img-box {
+  width: 100%;
+  height: 100%;
+  display: flex; /* Add flex display */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 20px; /* Add padding to prevent image from touching edges */
+}
+
+.project-modal .modal-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; /* Allow natural width */
+  height: auto; /* Allow natural height */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.project-modal .modal-img-box:hover img {
+  transform: scale(1.05);
+}
+
+.project-modal .modal-content {
+  padding: 0;
+}
+
+.project-modal .modal-title {
+  font-size: 28px;
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.project-modal .modal-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--orange-yellow-crayola);
+  border-radius: 3px;
+}
+
+.project-modal .description,
+.project-modal .technologies {
+  background: var(--eerie-black-2);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid var(--jet);
+  min-height: 120px; /* Reduced from 150px */
+  max-height: 180px; /* Reduced from 200px */
+  overflow-y: auto;
+}
+
+.project-modal .h5 {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-modal .h5::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: var(--orange-yellow-crayola);
+  border-radius: 50%;
+}
+
+.project-modal .description p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.8;
+}
+
+.project-modal .technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.project-modal .technologies li {
+  color: var(--white-2);
+  font-size: var(--fs-7);
+  background: var(--onyx);
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: var(--transition-1);
+}
+
+.project-modal .technologies li:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-1);
+  transform: translateY(-2px);
+}
+
+.project-modal .project-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-modal .project-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--onyx);
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: var(--transition-1);
+}
+
+.project-modal .project-link:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-1);
+  transform: translateY(-2px);
+}
+
+.project-modal .project-link ion-icon {
+  font-size: 20px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--onyx);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-2);
+  font-size: 20px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  z-index: 11; /* Add this line to increase z-index */
+}
+
+/* Custom scrollbar for modal */
+.project-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-modal::-webkit-scrollbar-track {
+  background: var(--eerie-black-2);
+  border-radius: 4px;
+}
+
+.project-modal::-webkit-scrollbar-thumb {
+  background: var(--jet);
+  border-radius: 4px;
+}
+
+.project-modal::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-yellow-crayola);
+}
+
+/* Add scrollbar styles for description and technologies */
+.project-modal .description,
+.project-modal .technologies,
+.project-modal .technologies ul {
+  scrollbar-width: thin;
+  scrollbar-color: var(--jet) var(--eerie-black-2);
+}
+
+.project-modal .description::-webkit-scrollbar,
+.project-modal .technologies::-webkit-scrollbar,
+.project-modal .technologies ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-modal .description::-webkit-scrollbar-track,
+.project-modal .technologies::-webkit-scrollbar-track,
+.project-modal .technologies ul::-webkit-scrollbar-track {
+  background: var(--eerie-black-2);
+}
+
+.project-modal .description::-webkit-scrollbar-thumb,
+.project-modal .technologies::-webkit-scrollbar-thumb,
+.project-modal .technologies ul::-webkit-scrollbar-thumb {
+  background: var(--jet);
+  border-radius: 3px;
+}
+
+/* Animation for modal opening */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.project-modal.active {
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+/* Improved Filter Styles */
+.filter-list {
+  display: none; /* Hidden by default on mobile */
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.filter-select-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.filter-select {
+  background: var(--eerie-black-2);
+  color: var(--white-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+}
+
+.filter-select:focus {
+  border-color: var(--orange-yellow-crayola);
+}
+
+.filter-select .select-icon {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.filter-select-box.active .select-icon {
+  transform: rotate(-180deg);
+}
+
+.select-list {
+  background: var(--eerie-black-2);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  margin-top: 8px;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.filter-select-box.active .select-list {
+  max-height: 200px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.select-item button {
+  background: var(--eerie-black-2);
+  color: var (--light-gray);
+  font-size: var(--fs-6);
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.select-item button:hover,
+.select-item button.active {
+  color: var(--orange-yellow-crayola);
+  background: var(--jet);
+}
+
+/* Responsive Improvements */
+@media (min-width: 768px) {
+  .filter-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding-left: 5px;
+  }
+
+  .filter-item button {
+    color: var(--light-gray);
+    font-size: var(--fs-5);
+    transition: var(--transition-1);
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: transparent;
+  }
+
+  .filter-item button:hover {
+    color: var(--orange-yellow-crayola);
+    background: var(--jet);
+  }
+
+  .filter-item button.active {
+    color: var(--eerie-black-2);
+    background: var(--orange-yellow-crayola);
+  }
+
+  .filter-select-box {
+    display: none; /* Hide select box on desktop */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-modal {
+    padding: 20px;
+    max-height: 90vh;
+  }
+
+  .project-modal .modal-img-wrapper {
+    min-height: 180px; /* Reduced from 200px */
+    max-height: 300px; /* Reduced from 400px */
+    aspect-ratio: 3/2; /* Changed from 4/3 for better mobile view */
+  }
+
+  .project-img {
+    height: 160px; /* Reduced from 180px */
+  }
+
+  .project-modal .description,
+  .project-modal .technologies {
+    min-height: 80px; /* Reduced from 100px */
+    max-height: 120px; /* Reduced from 150px */
+  }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .project-list {
+    grid-template-columns: 1fr; /* Keep single column */
+  }
+
+  .project-img {
+    height: 350px; /* Reduced from 450px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-list {
+    grid-template-columns: 1fr; /* Keep single column */
+    max-width: 900px; /* Optional: limit maximum width */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .project-img {
+    height: 400px; /* Reduced from 500px */
+  }
+}
+
+/* Remove or comment out the 1200px media query since we want single column */
+/* @media (min-width: 1200px) {
+  .project-list {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+} */

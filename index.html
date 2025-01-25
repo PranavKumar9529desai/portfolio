@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vCard - Personal Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/project.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/my-avatar.png"
+              alt="Pranavkumar Desai"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Pranavkumar Desai">Pranav Desai</h1>
+
+            <p class="title">Web developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a
+                  href="mailto:pranavkdesai1@gmail.com
+"
+                  class="contact-link"
+                  >pranavkdesai1@gmail.com
+                </a>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+12133522795" class="contact-link"
+                  >+91 9529939764</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">July 9, 2003</time>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Pune, Maharashtra, India</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/pranavkumar-desai-b27b8a252/"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://x.com/pranavdesa1549" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://github.com/PranavKumar9529desai"
+                class="social-link"
+              >
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I'm a Full Stack Web Developer with expertise in both frontend and
+              backend development, along with strong skills in DevOps practices
+              and a keen interest in AI/ML. I enjoy solving complex technical
+              challenges and building scalable, efficient web applications.
+            </p>
+
+            <p>
+              My core focus is on creating robust web solutions using modern
+              technologies like React, Node.js, and cloud platforms. I implement
+              CI/CD pipelines, containerization, and infrastructure as code for
+              seamless deployment. Additionally, I explore AI/ML applications in
+              web development to build smarter, more intelligent systems. My
+              goal is to deliver high-quality, maintainable code while following
+              industry best practices and security standards.
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+
+                  <p class="service-item-text light-text">
+                    Creating scalable and SEO-friendly using modern web
+                    technologies and best practices.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile Apps</h4>
+
+                  <p class="service-item-text light-text">
+                    Professional development of applications for iOS and Android
+                    using progressive web apps.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="camera icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Photography</h4>
+
+                  <p class="service-item-text light-text">
+                    I make high-quality photos of any category at a professional
+                    level.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg
+                "
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">AI/ML Development</h4>
+
+                  <p class="service-item-text light-text">
+                    Implementing cutting-edge AI/ML solutions and following
+                    latest breakthroughs.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - testimonials
+        -->
+
+          <section class="testimonials">
+            <h3 class="h3 testimonials-title">Testimonials</h3>
+
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-1.png"
+                      alt="Daniel lewis"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Athrav Deshmane
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Pranav was hired to create a corporate identity. We were
+                      very pleased with the work done. She has a lot of
+                      experience and is very concerned about the needs of
+                      client. .
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-2.png"
+                      alt="Jessica miller"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Swati kulkarni
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      We wanted to add chatbot to our site. Pranav was able to
+                      do it quickly and efficiently. he also helped us with the
+                      design of the chatbot. We are very pleased with the work
+                      done.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-3.png"
+                      alt="Emily evans"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Emily evans
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      SEO optimization was done on our site. We were very
+                      pleased with the work done. Pranav is a professional in
+                      his field.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-4.png"
+                      alt="Henry william"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Henry william
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      We needed a developer who has understanding of Next.js,
+                      AWS, and other DevOps tools.Pranav helped us to build a
+                      scalable and secure web application.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - testimonials modal
+        -->
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Pranav was hired to create a corporate identity. We were
+                    very pleased with the work done. She has a lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum
+                    dolor sit amet, ullamcous cididt consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels
+                    dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!--
+          - clients
+        -->
+
+          <!-- <section class="clients">
+            <h3 class="h3 clients-title">Clients</h3>
+
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-1-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-2-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-3-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-4-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-5-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-6-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section> -->
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Lovely professional university
+                </h4>
+
+                <span>2022 — 2026</span>
+
+                <p class="timeline-text">
+                  Bachelor of Technology in Computer Science Engineering with a
+                  specialization in Web Development and an impressive CGPA of
+                  8.5, learning modern web technologies and best practices.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Brilliant School and college of science
+                </h4>
+
+                <span>2020 — 2022</span>
+
+                <p class="timeline-text">
+                  Completed Higher Secondary Education (12th grade) from
+                  Maharashtra State Board with an impressive 89% marks,
+                  demonstrating strong academic performance and readiness for
+                  higher education.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Saraswati vidya mandir karad
+                </h4>
+
+                <span>2020</span>
+
+                <p class="timeline-text">
+                  Completed 10th board with an impressive CGPA of 93.6,
+                  demonstrating strong academic performance and foundational
+                  knowledge.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Creative director</h4>
+
+                <span>2024 — Present</span>
+
+                <p class="timeline-text">
+                  Working as a full stack developer at GymNavigator, developing
+                  and maintaining web applications using React.js, Node.js and
+                  MongoDB. Implemented user authentication, workout tracking
+                  features and real-time notifications system.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Art director</h4>
+
+                <span>2023 — 2024</span>
+
+                <p class="timeline-text">
+                  Worked as a frontend developer at Vulcon Cybersecurity
+                  Conference, developing responsive web interfaces and
+                  implementing security best practices. Built conference
+                  registration portal and real-time schedule management system.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Web designer</h4>
+
+                <span>2022 — 2023</span>
+
+                <p class="timeline-text">
+                  Worked as the lead developer at Cisco Club, developing and
+                  optimizing network monitoring tools and dashboards.
+                  Collaborated with team members to implement network security
+                  features and best practices.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Web Developemet</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">AI-ML</h5>
+                  <data value="70">70%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">DevOps</h5>
+                  <data value="90">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">DSA</h5>
+                  <data value="50">50%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 50%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>Web development</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-select-value>
+                  Web development
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <!-- Move title and category above the button -->
+                <h3 class="project-title">GymNavigator</h3>
+                <p class="project-category">Professional Gym management tool</p>
+
+                <button class="project-trigger" data-project-trigger>
+                  <figure class="project-img">
+                    <img
+                      src="./assets/images/gymnavigatorfullimge.png"
+                      alt="arrival"
+                      loading="lazy"
+                    />
+                  </figure>
+                </button>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <!-- Move title and category above the button -->
+                <h3 class="project-title">Vulcon</h3>
+                <p class="project-category">Cyber Security Conference</p>
+
+                <button class="project-trigger" data-project-trigger>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/vulnconfull.png"
+                      alt="vulcon"
+                      loading="lazy"
+                    />
+                  </figure>
+                </button>
+              </li>
+            </ul>
+
+            <div class="modal-container" data-project-modal-container>
+              <div class="overlay" data-project-overlay></div>
+
+              <!-- First Project Modal (GymNavigator) -->
+              <section class="project-modal" data-modal="gymnavigator">
+                <button class="modal-close-btn" data-modal-close-btn>
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+
+                <div class="modal-img-wrapper">
+                  <figure class="modal-img-box">
+                    <img
+                      src="./assets/images/gymnavigatorfullimge.png"
+                      alt="GymNavigator preview"
+                      data-modal-img
+                    />
+                  </figure>
+                </div>
+
+                <div class="modal-content">
+                  <h4 class="h3 modal-title">GymNavigator</h4>
+
+                  <div class="project-details">
+                    <div class="description">
+                      <h5 class="h5">Description:</h5>
+                      <p>
+                        A comprehensive gym management system built with modern
+                        web technologies. Helps users track workouts, manage
+                        memberships, and monitor fitness progress.
+                      </p>
+                    </div>
+
+                    <div class="technologies">
+                      <h5 class="h5">Technologies Used:</h5>
+                      <ul>
+                        <li>JWT Authentication</li>
+                        <li>Hono</li>
+                        <li>TailwindCSS</li>
+                        <li>Cloudflare Workers</li>
+                        <li>Next.js App Router</li>
+                        <li>Zod</li>
+                        <li>ShadcnUI</li>
+                        <li>NextAuth v5</li>
+                        <li>Cloudflare D1</li>
+                      </ul>
+                    </div>
+
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/PranavKumar9529desai/gymdominator-admin"
+                        class="project-link"
+                        target="_blank"
+                      >
+                        <ion-icon name="logo-github"></ion-icon>
+                        <span>View Source</span>
+                      </a>
+                      <a
+                        href="https://admin.gymnavigator.in/"
+                        class="project-link"
+                        target="_blank"
+                      >
+                        <ion-icon name="globe-outline"></ion-icon>
+                        <span>Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Second Project Modal (Vulcon) -->
+              <section class="project-modal" data-modal="vulcon">
+                <button class="modal-close-btn" data-modal-close-btn>
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+
+                <div class="modal-img-wrapper">
+                  <figure class="modal-img-box">
+                    <img
+                      src="./assets/images/vulnconfull.png"
+                      alt="Vulcon preview"
+                      data-modal-img
+                    />
+                  </figure>
+                </div>
+
+                <div class="modal-content">
+                  <h4 class="h3 modal-title">Vulcon</h4>
+
+                  <div class="project-details">
+                    <div class="description">
+                      <h5 class="h5">Description:</h5>
+                      <p>
+                        A modern web platform for a cybersecurity conference.
+                        Features include conference registration, schedule
+                        management, and real-time updates for attendees.
+                      </p>
+                    </div>
+
+                    <div class="technologies">
+                      <h5 class="h5">Technologies Used:</h5>
+                      <ul>
+                        <li>Next.js App Router</li>
+                        <li>TailwindCSS</li>
+                        <li>TypeScript</li>
+                        <li>Responsive Design</li>
+                        <li>Modern UI/UX</li>
+                      </ul>
+                    </div>
+
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/PranavKumar9529desai/vulcon"
+                        class="project-link"
+                        target="_blank"
+                      >
+                        <ion-icon name="logo-github"></ion-icon>
+                        <span>View Source</span>
+                      </a>
+                      <a
+                        href="http://vulncon.in/"
+                        class="project-link"
+                        target="_blank"
+                      >
+                        <ion-icon name="globe-outline"></ion-icon>
+                        <span>Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </article>
+
+        <!--
+        - #BLOG
+      -->
+
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-1.jpg"
+                      alt="Design conferences in 2022"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Design conferences in 2022
+                    </h3>
+
+                    <p class="blog-text">
+                      Veritatis et quasi architecto beatae vitae dicta sunt,
+                      explicabo.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-2.jpg"
+                      alt="Best fonts every designer"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Best fonts every designer
+                    </h3>
+
+                    <p class="blog-text">
+                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis
+                      est eligendi.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-3.jpg"
+                      alt="Design digest #80"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                    <p class="blog-text">
+                      Excepteur sint occaecat cupidatat no proident, quis
+                      nostrum exercitationem ullam corporis suscipit.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-4.jpg"
+                      alt="UI interactions of the week"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      UI interactions of the week
+                    </h3>
+
+                    <p class="blog-text">
+                      Enim ad minim veniam, consectetur adipiscing elit, quis
+                      nostrud exercitation ullamco laboris nisi.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-5.jpg"
+                      alt="The forgotten art of spacing"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      The forgotten art of spacing
+                    </h3>
+
+                    <p class="blog-text">
+                      Maxime placeat, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-6.jpg"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                    <p class="blog-text">
+                      Optio cumque nihil impedit uo minus quod maxime placeat,
+                      velit esse cillum.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="contact-info">
+            <div class="contact-card">
+              <div class="contact-info-item">
+                <ion-icon name="mail-outline"></ion-icon>
+                <div>
+                  <h3>Email</h3>
+                  <a href="mailto:pranavkdesai1@gmail.com">pranavkdesai1@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <ion-icon name="call-outline"></ion-icon>
+                <div>
+                  <h3>Phone</h3>
+                  <a href="tel:+919529939764">+91 9529939764</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
